@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Company>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Companies</h1>
+
+<a asp-action="Create">Add company</a>
+@foreach(var company in Model)
+{
+    <div>@company.Name</div>
+}
+
